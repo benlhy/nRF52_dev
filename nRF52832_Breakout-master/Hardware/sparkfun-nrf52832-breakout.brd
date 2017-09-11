@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.7.0">
+<eagle version="8.2.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -2632,23 +2632,20 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <class number="0" name="default" width="0" drill="0">
 </class>
 </classes>
-<designrules name="SparkFun-2-layer-FAB-LIMIT *">
-<description language="en">&lt;b&gt;SparkFun 2 Layer Design Rule Checks - STANDARD/TIGHT/FAB-LIMIT&lt;/b&gt;
+<designrules name="LaenPCBOrder">
+<description language="de">&lt;b&gt;EAGLE Design Rules&lt;/b&gt;
 &lt;p&gt;
-These rules have been curated by SparkFuns DFM commitee. After doing much research, communicating with our multiple fab houses, and getting quotes of various designs, we have compiled three DRU files. 
+Die Standard-Design-Rules sind so gewählt, dass sie für 
+die meisten Anwendungen passen. Sollte ihre Platine 
+besondere Anforderungen haben, treffen Sie die erforderlichen
+Einstellungen hier und speichern die Design Rules unter 
+einem neuen Namen ab.</description>
+<description language="en">&lt;b&gt;Laen's PCB Order Design Rules&lt;/b&gt;
 &lt;p&gt;
-&lt;b&gt;STANDARD:&lt;/b&gt; This is more of a &quot;best case scenario&quot; set of limitations. If your design has the space, and/or you have the time to work within these parameters, please do. Larger trace width and clearance makes for easier visual inspection of the PCB while troubleshooting (useful in production and to the end user). It also allows for better ability to hack a trace (if you are crazy enough to scrape away the mask and solder to a trace). Another thing to keep in mind is that more metal is just more robust. 
-&lt;p&gt;
-&lt;b&gt;TIGHT:&lt;/b&gt; This is where cost comes into play. We have found that most fab houses begin to add extra charges when you go smaller than these specs. In some cases, going to less than 15 mil trace can increase the cost by 10%. (This is why we have set the min drill on this DRU to 15 mil) Same story for traces thinner than 7 mil. To avoid those extra charges, then stay within the rules of this DRU.
-&lt;p&gt;
-&lt;b&gt;FAB-LIMIT:&lt;/b&gt; These set of rules are at the very limit of most fab houses capabilities. You will pay more for these specs, and it should be used on designs that have a darned good reason to need 4 mil vias and 4 mil traces.
-&lt;p&gt;
-**NOTE Clearance, Distance, Sizes, and Restring are all set to different limits in each of these three DRU files. Please compare the files within the CAM job editor window of eagle to see all the numbers.
-&lt;p&gt;
-***NOTE, Please set your Net Classes to default (0mil for all settings), so that it won't effect the DRC when you run it with these settings.</description>
+Please make sure your boards conform to these design rules.</description>
 <param name="layerSetup" value="(1*16)"/>
-<param name="mtCopper" value="0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm"/>
-<param name="mtIsolate" value="1.5mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm"/>
+<param name="mtCopper" value="0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm"/>
+<param name="mtIsolate" value="1.5011mm 0.1499mm 0.2007mm 0.1499mm 0.2007mm 0.1499mm 0.2007mm 0.1499mm 0.2007mm 0.1499mm 0.2007mm 0.1499mm 0.2007mm 0.1499mm 0.2007mm"/>
 <param name="mdWireWire" value="6mil"/>
 <param name="mdWirePad" value="6mil"/>
 <param name="mdWireVia" value="6mil"/>
@@ -2660,12 +2657,12 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <param name="mdSmdSmd" value="6mil"/>
 <param name="mdViaViaSameLayer" value="8mil"/>
 <param name="mnLayersViaInSmd" value="2"/>
-<param name="mdCopperDimension" value="4mil"/>
-<param name="mdDrill" value="4mil"/>
+<param name="mdCopperDimension" value="15mil"/>
+<param name="mdDrill" value="6mil"/>
 <param name="mdSmdStop" value="0mil"/>
-<param name="msWidth" value="4mil"/>
-<param name="msDrill" value="6mil"/>
-<param name="msMicroVia" value="9.99mm"/>
+<param name="msWidth" value="6mil"/>
+<param name="msDrill" value="13mil"/>
+<param name="msMicroVia" value="13mil"/>
 <param name="msBlindViaRatio" value="0.5"/>
 <param name="rvPadTop" value="0.25"/>
 <param name="rvPadInner" value="0.25"/>
@@ -2674,15 +2671,15 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <param name="rvViaInner" value="0.25"/>
 <param name="rvMicroViaOuter" value="0.25"/>
 <param name="rvMicroViaInner" value="0.25"/>
-<param name="rlMinPadTop" value="5mil"/>
+<param name="rlMinPadTop" value="7mil"/>
 <param name="rlMaxPadTop" value="20mil"/>
-<param name="rlMinPadInner" value="6mil"/>
+<param name="rlMinPadInner" value="7mil"/>
 <param name="rlMaxPadInner" value="20mil"/>
-<param name="rlMinPadBottom" value="5mil"/>
+<param name="rlMinPadBottom" value="7mil"/>
 <param name="rlMaxPadBottom" value="20mil"/>
-<param name="rlMinViaOuter" value="5mil"/>
+<param name="rlMinViaOuter" value="7mil"/>
 <param name="rlMaxViaOuter" value="20mil"/>
-<param name="rlMinViaInner" value="6mil"/>
+<param name="rlMinViaInner" value="7mil"/>
 <param name="rlMaxViaInner" value="20mil"/>
 <param name="rlMinMicroViaOuter" value="4mil"/>
 <param name="rlMaxMicroViaOuter" value="20mil"/>
@@ -2695,11 +2692,11 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <param name="psElongationOffset" value="100"/>
 <param name="mvStopFrame" value="1"/>
 <param name="mvCreamFrame" value="0"/>
-<param name="mlMinStopFrame" value="4mil"/>
-<param name="mlMaxStopFrame" value="4mil"/>
+<param name="mlMinStopFrame" value="3mil"/>
+<param name="mlMaxStopFrame" value="3mil"/>
 <param name="mlMinCreamFrame" value="0mil"/>
 <param name="mlMaxCreamFrame" value="0mil"/>
-<param name="mlViaStopLimit" value="25mil"/>
+<param name="mlViaStopLimit" value="0mil"/>
 <param name="srRoundness" value="0"/>
 <param name="srMinRoundness" value="0mil"/>
 <param name="srMaxRoundness" value="0mil"/>
@@ -2708,7 +2705,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <param name="dpMaxLengthDifference" value="10mm"/>
 <param name="dpGapFactor" value="2.5"/>
 <param name="checkGrid" value="0"/>
-<param name="checkAngle" value="1"/>
+<param name="checkAngle" value="0"/>
 <param name="checkFont" value="1"/>
 <param name="checkRestrict" value="1"/>
 <param name="useDiameter" value="13"/>
@@ -2820,12 +2817,12 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <attribute name="PROD_ID" value="XTAL-13459" x="4.445" y="41.275" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="C9" library="nrf52832-breakout-temp" package="0402" value="6pF" x="4.445" y="43.18" rot="R180">
-<attribute name="VALUE" value="6pF" x="4.445" y="43.18" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="PROD_ID" value="CAP-13455" x="4.445" y="43.18" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="VALUE" value="6pF" x="4.445" y="43.18" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="C10" library="nrf52832-breakout-temp" package="0402" value="6pF" x="4.445" y="39.4716" rot="R180">
-<attribute name="VALUE" value="6pF" x="4.445" y="39.4716" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="PROD_ID" value="CAP-13455" x="4.445" y="39.4716" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="VALUE" value="6pF" x="4.445" y="39.4716" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="Y2" library="SparkFun-Clocks" package="CRYSTAL-SMD-3.2X1.5MM" value="32.768kHz" x="8.89" y="27.94" rot="R180">
 <attribute name="PROD_ID" value="XTAL-13062" x="8.89" y="27.94" size="1.778" layer="27" font="vector" ratio="15" rot="R180" display="off"/>
@@ -2853,16 +2850,16 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <attribute name="PROD_ID" value="CAP-12417" x="5.08" y="33.655" size="1.778" layer="27" font="vector" ratio="15" rot="R270" display="off"/>
 </element>
 <element name="L1" library="nrf52832-breakout-temp" package="0402" value="3.9nH" x="10.105" y="42.545" rot="R270">
-<attribute name="VALUE" value="3.9nH" x="10.105" y="42.545" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="PROD_ID" value="NDUC-13457" x="10.105" y="42.545" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="VALUE" value="3.9nH" x="10.105" y="42.545" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="C11" library="nrf52832-breakout-temp" package="0402" value="0.8pF" x="9.525" y="40.3098">
-<attribute name="VALUE" value="0.8pF" x="9.525" y="40.3098" size="1.778" layer="27" display="off"/>
 <attribute name="PROD_ID" value="CAP-13456" x="9.525" y="40.3098" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" value="0.8pF" x="9.525" y="40.3098" size="1.778" layer="27" display="off"/>
 </element>
 <element name="C5" library="nrf52832-breakout-temp" package="0402" value="100pF" x="6.5024" y="41.91" rot="R270">
-<attribute name="VALUE" value="100pF" x="6.5024" y="41.91" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="PROD_ID" value="CAP-13458" x="6.5024" y="41.91" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="VALUE" value="100pF" x="6.5024" y="41.91" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="JP4" library="SparkFun-Jumpers" package="PAD-JUMPER-2-NC_BY_TRACE_YES_SILK" value="XL1" x="7.62" y="27.94" rot="MR180"/>
 <element name="JP5" library="SparkFun-Jumpers" package="PAD-JUMPER-2-NC_BY_TRACE_YES_SILK" value="XL2" x="10.16" y="27.94" rot="MR0"/>
@@ -2900,12 +2897,12 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <element name="J4" library="SparkFun-Connectors" package="1X17" value="" x="16.51" y="3.81" rot="R90"/>
 <element name="C12" library="SparkFun-Passives" package="0402" value="DNP" x="9.525" y="44.45" rot="R180"/>
 <element name="C7" library="nrf52832-breakout-temp" package="0603" value="180pF" x="5.715" y="24.13" rot="R90">
-<attribute name="VALUE" value="180pF" x="5.715" y="24.13" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="PROD_ID" value="CAP-11661" x="5.715" y="24.13" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="VALUE" value="180pF" x="5.715" y="24.13" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="C8" library="nrf52832-breakout-temp" package="0603" value="180pF" x="12.7" y="24.13" rot="R90">
-<attribute name="VALUE" value="180pF" x="12.7" y="24.13" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="PROD_ID" value="CAP-11661" x="12.7" y="24.13" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="VALUE" value="180pF" x="12.7" y="24.13" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="LOGO2" library="SparkFun-Aesthetics" package="SFE_LOGO_NAME_.1" value="SFE_LOGO_NAME.1_INCH" x="2.921" y="48.26"/>
 <element name="J2" library="SparkFun-Connectors" package="1X02" value="" x="10.16" y="25.4" rot="R180"/>
@@ -3975,7 +3972,6 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <approved hash="19,1,e5d716c660ddbd85"/>
 <approved hash="19,16,34df5f335bb3305f"/>
 <approved hash="19,16,b0d90d3509b4b458"/>
-<approved hash="3,1,ef6de161e361ef6f"/>
 <approved hash="4,1,67ac175a37621232"/>
 <approved hash="19,1,bcfd557cb9f5b56d"/>
 <approved hash="19,1,08aea6827887d994"/>
@@ -3999,7 +3995,6 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <approved hash="19,1,707dd01dd40e746e"/>
 <approved hash="19,16,bb7bc89836bfb925"/>
 <approved hash="19,16,908609ac37244bd3"/>
-<approved hash="19,16,960b068b0e869e06"/>
 <approved hash="19,16,2e294b933420b447"/>
 <approved hash="19,16,1d6825b8f4a8cbd3"/>
 <approved hash="19,16,b5d9756bb57e6bc3"/>
@@ -4016,9 +4011,11 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <approved hash="19,16,4a87d3b85c3020d2"/>
 <approved hash="19,16,fa3d6afd42eaea26"/>
 <approved hash="19,16,09c173ce67d63c71"/>
-<approved hash="19,16,7c029c8294977417"/>
 <approved hash="19,16,4c2929831d309d47"/>
 <approved hash="19,16,2368b11ab6d5d8de"/>
+<approved hash="3,1,ef6de161e361ef6f"/>
+<approved hash="19,16,960b068b0e869e06"/>
+<approved hash="19,16,7c029c8294977417"/>
 </errors>
 </board>
 </drawing>
